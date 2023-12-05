@@ -51,9 +51,10 @@ Partial Class Update
         ' labelPrice
         ' 
         labelPrice.AutoSize = True
-        labelPrice.Location = New Point(636, 313)
+        labelPrice.Font = New Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
+        labelPrice.Location = New Point(628, 313)
         labelPrice.Name = "labelPrice"
-        labelPrice.Size = New Size(38, 15)
+        labelPrice.Size = New Size(47, 20)
         labelPrice.TabIndex = 18
         labelPrice.Text = "PRICE"
         ' 
@@ -68,9 +69,10 @@ Partial Class Update
         ' labelQuantity
         ' 
         labelQuantity.AutoSize = True
-        labelQuantity.Location = New Point(636, 230)
+        labelQuantity.Font = New Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
+        labelQuantity.Location = New Point(628, 230)
         labelQuantity.Name = "labelQuantity"
-        labelQuantity.Size = New Size(63, 15)
+        labelQuantity.Size = New Size(79, 20)
         labelQuantity.TabIndex = 16
         labelQuantity.Text = "QUANTITY"
         ' 
@@ -85,9 +87,10 @@ Partial Class Update
         ' labelName
         ' 
         labelName.AutoSize = True
-        labelName.Location = New Point(636, 146)
+        labelName.Font = New Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
+        labelName.Location = New Point(628, 146)
         labelName.Name = "labelName"
-        labelName.Size = New Size(97, 15)
+        labelName.Size = New Size(121, 20)
         labelName.TabIndex = 14
         labelName.Text = "PRODUCT NAME"
         ' 
@@ -102,9 +105,10 @@ Partial Class Update
         ' labelId
         ' 
         labelId.AutoSize = True
-        labelId.Location = New Point(636, 60)
+        labelId.Font = New Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
+        labelId.Location = New Point(628, 60)
         labelId.Name = "labelId"
-        labelId.Size = New Size(74, 15)
+        labelId.Size = New Size(94, 20)
         labelId.TabIndex = 12
         labelId.Text = "PRODUCT ID"
         ' 
