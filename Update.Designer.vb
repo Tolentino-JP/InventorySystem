@@ -61,7 +61,7 @@ Partial Class Update
         ' inputPrice
         ' 
         inputPrice.Font = New Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
-        inputPrice.Location = New Point(629, 344)
+        inputPrice.Location = New Point(630, 349)
         inputPrice.Name = "inputPrice"
         inputPrice.Size = New Size(221, 27)
         inputPrice.TabIndex = 17
