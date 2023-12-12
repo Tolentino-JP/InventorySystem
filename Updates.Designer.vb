@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Update
+Partial Class Updates
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,7 +22,7 @@ Partial Class Update
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        btnSubmit = New Button()
+        btnUpdate = New Button()
         labelPrice = New Label()
         inputPrice = New TextBox()
         labelQuantity = New Label()
@@ -36,17 +36,18 @@ Partial Class Update
         columnProductName = New DataGridViewTextBoxColumn()
         columnQuantity = New DataGridViewTextBoxColumn()
         columnPrice = New DataGridViewTextBoxColumn()
+        btnCancel = New Button()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
-        ' btnSubmit
+        ' btnUpdate
         ' 
-        btnSubmit.Location = New Point(629, 426)
-        btnSubmit.Name = "btnSubmit"
-        btnSubmit.Size = New Size(221, 37)
-        btnSubmit.TabIndex = 19
-        btnSubmit.Text = "ADD PRODUCT"
-        btnSubmit.UseVisualStyleBackColor = True
+        btnUpdate.Location = New Point(629, 438)
+        btnUpdate.Name = "btnUpdate"
+        btnUpdate.Size = New Size(221, 37)
+        btnUpdate.TabIndex = 19
+        btnUpdate.Text = "UPDATE PRODUCT"
+        btnUpdate.UseVisualStyleBackColor = True
         ' 
         ' labelPrice
         ' 
@@ -154,12 +155,22 @@ Partial Class Update
         columnPrice.HeaderText = "PRICE"
         columnPrice.Name = "columnPrice"
         ' 
-        ' Update
+        ' btnCancel
+        ' 
+        btnCancel.Location = New Point(629, 395)
+        btnCancel.Name = "btnCancel"
+        btnCancel.Size = New Size(221, 37)
+        btnCancel.TabIndex = 20
+        btnCancel.Text = "Cancel"
+        btnCancel.UseVisualStyleBackColor = True
+        ' 
+        ' Updates
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(863, 495)
-        Controls.Add(btnSubmit)
+        Controls.Add(btnCancel)
+        Controls.Add(btnUpdate)
         Controls.Add(labelPrice)
         Controls.Add(inputPrice)
         Controls.Add(labelQuantity)
@@ -169,14 +180,15 @@ Partial Class Update
         Controls.Add(labelId)
         Controls.Add(inputId)
         Controls.Add(DataGridView1)
-        Name = "Update"
+        Name = "Updates"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Update"
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
 
-    Friend WithEvents btnSubmit As Button
+    Friend WithEvents btnUpdate As Button
     Friend WithEvents labelPrice As Label
     Friend WithEvents inputPrice As TextBox
     Friend WithEvents labelQuantity As Label
@@ -190,4 +202,5 @@ Partial Class Update
     Friend WithEvents columnProductName As DataGridViewTextBoxColumn
     Friend WithEvents columnQuantity As DataGridViewTextBoxColumn
     Friend WithEvents columnPrice As DataGridViewTextBoxColumn
+    Friend WithEvents btnCancel As Button
 End Class

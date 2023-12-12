@@ -1,11 +1,11 @@
 ﻿Imports MySql.Data.MySqlClient
 
-Public Class Add
+Public Class Updates
 
     Dim MysqlConn As MySqlConnection
     Dim COMMAND As MySqlCommand
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+    Private Sub Update_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 
@@ -14,13 +14,7 @@ Public Class Add
         Form1.Show()
     End Sub
 
-    Private Sub Add_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-
-
-    End Sub
-
-    Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
+    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
         MysqlConn = New MySqlConnection
         MysqlConn.ConnectionString = "Server=127.0.0.1;Database=inventorysystem;User Id=root;"
         Dim READER As MySqlDataReader
@@ -28,11 +22,17 @@ Public Class Add
         Try
             MysqlConn.Open()
             Dim Query As String
-            Query = "INSERT INTO inventorysystem.products (Product_Name, Quantity, Price) VALUES ('" & inputName.Text & "', '" & inputQuantity.Text & "', '" & inputPrice.Text & "')"
-            COMMAND = New MySqlCommand(Query, MysqlConn)
-            READER = COMMAND.ExecuteReader
+            Query = "UPDATE inventorysystem.products set  
+            Product_Name ='" & inputName.Text & "', 
+            Quantity ='" & inputQuantity.Text & "', 
+            Price ='" & inputPrice.Text & "'
+            WHERE Product_Id = '" & inputId.Text & "'"
 
-            MessageBox.Show("PRODUCT ADDED")
+
+            COMMAND = New MySqlCommand(Query, MysqlConn)
+            READER = Command.ExecuteReader
+
+            MessageBox.Show("PRODUCT UPDATED")
 
             MysqlConn.Close()
 
@@ -42,7 +42,5 @@ Public Class Add
         Finally
             MysqlConn.Dispose()
         End Try
-
-
     End Sub
 End Class

@@ -27,8 +27,6 @@ Partial Class Add
         columnProductName = New DataGridViewTextBoxColumn()
         columnQuantity = New DataGridViewTextBoxColumn()
         columnPrice = New DataGridViewTextBoxColumn()
-        inputId = New TextBox()
-        labelId = New Label()
         labelName = New Label()
         inputName = New TextBox()
         labelQuantity = New Label()
@@ -36,6 +34,7 @@ Partial Class Add
         labelPrice = New Label()
         inputPrice = New TextBox()
         btnSubmit = New Button()
+        btnCancel = New Button()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -72,23 +71,6 @@ Partial Class Add
         columnPrice.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         columnPrice.HeaderText = "PRICE"
         columnPrice.Name = "columnPrice"
-        ' 
-        ' inputId
-        ' 
-        inputId.Font = New Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
-        inputId.Location = New Point(629, 91)
-        inputId.Name = "inputId"
-        inputId.Size = New Size(221, 27)
-        inputId.TabIndex = 1
-        ' 
-        ' labelId
-        ' 
-        labelId.AutoSize = True
-        labelId.Location = New Point(636, 60)
-        labelId.Name = "labelId"
-        labelId.Size = New Size(74, 15)
-        labelId.TabIndex = 2
-        labelId.Text = "PRODUCT ID"
         ' 
         ' labelName
         ' 
@@ -143,18 +125,28 @@ Partial Class Add
         ' 
         ' btnSubmit
         ' 
-        btnSubmit.Location = New Point(629, 426)
+        btnSubmit.Location = New Point(629, 438)
         btnSubmit.Name = "btnSubmit"
         btnSubmit.Size = New Size(221, 37)
         btnSubmit.TabIndex = 9
         btnSubmit.Text = "ADD PRODUCT"
         btnSubmit.UseVisualStyleBackColor = True
         ' 
+        ' btnCancel
+        ' 
+        btnCancel.Location = New Point(629, 395)
+        btnCancel.Name = "btnCancel"
+        btnCancel.Size = New Size(221, 37)
+        btnCancel.TabIndex = 10
+        btnCancel.Text = "Cancel"
+        btnCancel.UseVisualStyleBackColor = True
+        ' 
         ' Add
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(878, 492)
+        Controls.Add(btnCancel)
         Controls.Add(btnSubmit)
         Controls.Add(labelPrice)
         Controls.Add(inputPrice)
@@ -162,10 +154,9 @@ Partial Class Add
         Controls.Add(inputQuantity)
         Controls.Add(labelName)
         Controls.Add(inputName)
-        Controls.Add(labelId)
-        Controls.Add(inputId)
         Controls.Add(DataGridView1)
         Name = "Add"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Add"
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
@@ -177,8 +168,6 @@ Partial Class Add
     Friend WithEvents columnProductName As DataGridViewTextBoxColumn
     Friend WithEvents columnQuantity As DataGridViewTextBoxColumn
     Friend WithEvents columnPrice As DataGridViewTextBoxColumn
-    Friend WithEvents inputId As TextBox
-    Friend WithEvents labelId As Label
     Friend WithEvents labelName As Label
     Friend WithEvents inputName As TextBox
     Friend WithEvents labelQuantity As Label
@@ -186,4 +175,5 @@ Partial Class Add
     Friend WithEvents labelPrice As Label
     Friend WithEvents inputPrice As TextBox
     Friend WithEvents btnSubmit As Button
+    Friend WithEvents btnCancel As Button
 End Class

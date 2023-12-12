@@ -27,6 +27,7 @@ Partial Class Form1
         btnUpdate = New Button()
         btnSearch = New Button()
         btnAdd = New Button()
+        btnExit = New Button()
         SuspendLayout()
         ' 
         ' Label1
@@ -75,17 +76,28 @@ Partial Class Form1
         btnAdd.Text = "ADD PRODUCT"
         btnAdd.UseVisualStyleBackColor = True
         ' 
+        ' btnExit
+        ' 
+        btnExit.Location = New Point(454, 421)
+        btnExit.Name = "btnExit"
+        btnExit.Size = New Size(152, 59)
+        btnExit.TabIndex = 12
+        btnExit.Text = "EXIT"
+        btnExit.UseVisualStyleBackColor = True
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1018, 533)
+        Controls.Add(btnExit)
         Controls.Add(btnDelete)
         Controls.Add(btnUpdate)
         Controls.Add(btnSearch)
         Controls.Add(btnAdd)
         Controls.Add(Label1)
         Name = "Form1"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Inventory System"
         ResumeLayout(False)
         PerformLayout()
@@ -96,4 +108,5 @@ Partial Class Form1
     Friend WithEvents btnUpdate As Button
     Friend WithEvents btnSearch As Button
     Friend WithEvents btnAdd As Button
+    Friend WithEvents btnExit As Button
 End Class
